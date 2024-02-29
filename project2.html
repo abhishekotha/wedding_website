@@ -9,8 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./jquery.fireworks.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="nav_bar">
@@ -21,8 +23,8 @@
             <ul>
                 <li  onclick="shift('banner')">Home</li>
                 <li onclick="shift('details')">Details</li>
-                <li  onclick="shift('portifolio')">Portifolio</li>
-                <li><a href="https://photos.app.goo.gl/f4SrajYyH7EHKRm58" target="_blank">Gallarey</a></li>
+                <li  onclick="shift('portifolio')">Profile</li>
+                <li><a href="https://photos.app.goo.gl/ZiMyBmaAN798TJwv7" target="_blank">Gallarey</a></li>
                 <li onclick="shift('address')">Contact</li>
             </ul>
         </div>
@@ -60,7 +62,7 @@
       </div>
       <div class="wed_card"> 
         <div class="upper">
-            <img src="./back.jpeg">
+            <img src="./th1.jpg">
         </div>
         <div class="lowet">
             <h1>Wedding</h1>
@@ -72,7 +74,7 @@
       </div>
       <div class="wed_card">
         <div class="upper">
-            <img src="./back.jpeg">
+            <img src="./th.jpg">
         </div>
         <div class="lowet">
           <h1>Dinner</h1>
@@ -86,19 +88,22 @@
   </div>
   </div>
   <div class="all portifolio">
+    <img class="heart_img" src="./heart.png">
+    <img class="heart_img" src="./heart.png">
+    <img class="heart_img" src="./heart.png">
     <div class="max_width">
       <div class="ma_details_group">
-        <div class="ma_details">
+        <div class="ma_details" data-aos="fade-right" data-aos-duration="3000" data-aos-easing="linear">
             <img src="./groom.jpeg"><br>
             <span class="name">Venkat</span>
-            <p class="family">Son of mr and ms </p>
+            <p class="family">S/0 Mr & Mrs. K.Sanyasi Rao & Sujatha</p>
         </div>
-        <div class="ma_details">
-            <img src="./bride.jpeg"><br>
-            <span class="name">Vaishnavi</span>
-            <p class="family">Son of mr and ms </p>
+        <div class="ma_details" data-aos="fade-up" data-aos-duration="3000" data-aos-easing="linear">
+          <img src="./bride.jpeg"><br>
+          <span class="name">Vaishnavi</span>
+          <p class="family">D/0 Mr & Mrs. V. SrinivasRao & Nagamani</p>
         </div>
-    </div>
+      </div>
       <div class="seven_steps">
         <p style="text-align: center; ">We are going to start our journey with the steps</p><br><br>
         <div class="step" style="--i:0">
@@ -115,7 +120,7 @@
             <span class="arrow"></span>
           </div>
           <div class="number ro">
-            <img src="./foot_print.png">
+            <img src="./foot_print.png" >
           </div>
         </div>
         <div class="step" style="--i:2">
@@ -158,14 +163,15 @@
             <img src="./foot_print.png">
           </div>
         </div>
+      </div>
     </div>
     </div>
   </div>
   <div class="all address">
     <div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15201.427016437576!2d83.29687!3d17.7278218!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3943dd041d3bf5%3A0xa4d6bf2d07ee6d54!2sHOTEL%20SINKA%20GRAND!5e0!3m2!1sen!2sin!4v1709127105781!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
-    <br><br><p> Email = kothaabhishek125@gmail.com</p>
-    <p> Number = 8125604426</p>
+    <br><br><p> Email = vanvaishnavi@gmail.com</p>
+    <p> Number = 9052544736</p>
     <p>Address = Hotel Sinka Grand beside Bata showroom,
           Tsn Colony,
         Dondaparthy,
@@ -188,7 +194,7 @@
     }
     let main = "banner";
     function shift(a){
-      document.querySelector(".sub_nave").classList.toggle("active1");
+      tog_nan();
       document.querySelector("." + main).style.display = "none";
       document.querySelector("." + main).style.top = "100vh";
       document.querySelector("." + a).style.top = "80px";
@@ -219,9 +225,15 @@
         document.querySelector(".vol").style.display = "block";
         document.querySelector(".no_vol").style.display = "none";
         audio.pause();
-      }
+      } 
     }
     play();
+    $('.banner').fireworks({ 
+      sound: false,
+      opacity: 0.4, 
+      width: '100%', 
+      height: '100%' 
+  });
   </script>
   </body>
 </html>
