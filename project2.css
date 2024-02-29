@@ -1,0 +1,461 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: scroll;
+    position: relative;
+    font-family: "Great Vibes", cursive;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgb(222 214 197);
+    color: rgb(97 6 6);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    position: relative;
+    width : 100vw;
+    height : 80px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icone span{
+    font-size: 25px;
+    color: rgb(163, 21, 21);
+}
+
+.sub_nave ul{
+    list-style: none;
+    width: 65vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sub_nave li{
+    cursor: pointer;
+}
+
+.phone_div{
+    display: none;
+}
+
+.phone_div li{
+    width: 45px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    list-style: none;
+    background: black;
+}
+
+.banner{
+    padding: 30px;
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    transition: 0.5s;
+    text-align: center;
+    overflow: scroll;
+    color: rgb(162 138 74);
+}
+
+.banner::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background-image: url("./rings1.jpeg") ;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(30%);
+    z-index: -1;
+}
+
+.ma_details{
+    border: 2px solid #a28a4a;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.ma_details img{
+    width: 250px;
+    height: 380px;
+    border-radius: 150px;
+    border: 5px solid rgb(162 138 74);
+    margin: 20px;
+}
+.ma_details_group{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.name{
+    font-size: 22px;
+}
+
+.banner h1{
+    text-align: center;
+    z-index: 2;
+}
+
+.couple_ani{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.banner p{
+    font-size: larger;
+}
+
+.details{
+    width: 100vw;
+    overflow: scroll;
+}
+
+.for_flex{
+    width: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.lowet span{
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.lowet p{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.date{
+    font-size: 25px;
+}
+
+
+.wed_card{
+    position: relative;
+    width: 200px;
+    height: 250px;
+    transition: 1s ease-in-out;
+    border: 1px solid black;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.3);
+    margin : 30px;
+}
+
+.upper img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.upper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+}
+
+.wed_card:hover{
+    transform: perspective(2000px)  rotate(-10deg);
+    z-index: 1000;
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.25);
+}
+
+.wed_card:hover .upper{
+    transform: rotateY(-120deg);
+}
+
+.lowet{
+    position: absolute;
+    padding: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.lowet h1{
+    text-align: center;
+}
+
+.combine{
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 150px;
+    margin: 15px;
+    transition: 3s;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+.portifolio{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: scroll;
+}
+
+.max_width{
+    width: 100%;
+}
+.seven_steps{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step{
+    width: 320px;
+    height: 100px;
+    margin-top: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    animation: slide_top 1s linear forwards;
+    animation-delay: calc(1.2s * var(--i));
+    opacity: 0;
+}
+
+.step:nth-child(even){
+    margin-left: 250px;
+    flex-direction: row-reverse;
+}
+
+.step:nth-child(odd){
+    margin-left: -250px;
+}
+
+
+.number img{
+    width: 40px;
+    height: 45px;
+}
+
+.ro{
+    transform: rotateY(180deg);
+}
+
+
+
+.all{
+    min-height: 100vh;
+    transition: 2s;
+    position: absolute;
+    top: 100vh;
+    left: 0px;
+    overflow: scroll;
+    display: none;
+}
+
+
+.meaning{
+    height: 100%;
+    width: 70%;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.address{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding: 20px;
+    overflow: scroll;
+}
+
+iframe{
+    max-width: 500px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid #a28a4a;
+}
+
+audio{
+    display: none;
+}
+
+.banner{
+    top: 80px;
+    display: block; 
+}
+
+button{
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+button img{
+    position: absolute;
+    left: 0;
+    top: 5px;   
+    display: none;
+    width: 90%;
+}
+
+
+
+@keyframes slide_top {
+    0% {
+        opacity: 0;
+        /* transform: translateY(-30px); */
+    }
+    50% {
+        opacity: 1; 
+        /* transform: translateY(0); */
+    }
+    100% {
+        opacity: 1;
+        /* transform: translateY(30px); */
+    }
+}
+
+@keyframes linedraw{
+    from{
+        height: 0;
+    }
+    to{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width : 720px){
+    .details{
+        flex-direction: column;
+    }
+    .wed_card{
+        transform: scale(0.8);
+    }
+    .combine:nth-child(2){
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .step:nth-child(even){
+        margin-left: 0px;
+    }
+    .step:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    .seven_steps{
+        margin-left: 10%;
+    }
+    .seven_steps::after{
+        display: none;
+    }
+    .combine{
+        width: 85vw;
+    }
+    .banner{
+        overflow: hidden;
+        height: 100vh;
+    }
+    .sub_nave{
+        position: absolute;
+        left: -25%;
+        top: 80px;
+        display: none;
+    }
+    .sub_nave ul{
+        padding-left: 20px;
+        flex-direction: column;
+        height: 200px;
+        border-radius: 50px;
+        background: white;
+        
+    }
+    .sub_nave ul li{
+        z-index: 200;
+    }
+    .phone_div{
+        display: block;
+    }
+    iframe{
+        width: 80vw;
+        height: 80vw;
+    }
+    .active1{
+        display: block;
+        z-index: 10;
+    }
+    .ma_details_group{
+        flex-direction: column;
+    }
+    .step:nth-child(odd){
+        margin-left: 0px;
+    }
+    .for_flex{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width : 450px){
+    .seven_steps{
+        margin-left: 0px;
+    }
+    .step{
+        width: 300px;
+    }
+    .couple_ani img{
+        transform: scale(0.8);
+    }
+    .banner p{
+        font-size: medium;
+    }
+    h1{
+        font-size: x-large;
+    }
+    .banner{
+        padding: 10px;
+    }
+}
