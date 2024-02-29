@@ -5,10 +5,10 @@
 }
 
 body{
-    overflow: scroll;
+    overflow: hidden;
     position: relative;
     font-family: "Great Vibes", cursive;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     background: rgb(222 214 197);
     color: rgb(97 6 6);
@@ -19,13 +19,17 @@ body{
 }
 
 header{
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
     width : 100vw;
     height : 80px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 100;
+    background: rgb(222 214 197);
 }
 
 .icone span{
@@ -133,6 +137,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: scroll;
 }
 
 h1{
@@ -163,7 +168,6 @@ h1{
     width: 200px;
     height: 250px;
     transition: 1s ease-in-out;
-    border: 1px solid black;
     transform-style: preserve-3d;
     transform: perspective(2000px);
     box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.3);
@@ -186,11 +190,28 @@ h1{
     z-index: 1;
     transition: 1s;
 }
+.upper::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 50%;
+    content: "Click me";
+}
 
 .wed_card:hover{
     transform: perspective(2000px)  rotate(-10deg);
     z-index: 1000;
     box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.25);
+}
+
+.lowet h1{
+    color: black;
 }
 
 .wed_card:hover .upper{
@@ -313,11 +334,16 @@ iframe{
     height: 400px;
     margin: 10px;
     border-radius: 20px;
-    border: 2px solid #a28a4a;
+    border: 5px solid #a28a4a !important;
 }
 
 audio{
     display: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(97 6 6);
 }
 
 .banner{
@@ -327,10 +353,10 @@ audio{
 
 button{
     position: fixed;
-    right: 30px;
-    bottom: 50px;
-    width: 50px;
-    height: 50px;
+    right: 25px;
+    bottom: 25px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -339,10 +365,25 @@ button img{
     left: 0;
     top: 5px;   
     display: none;
-    width: 90%;
+    width: 70%;
+    height: 70%;
+    padding-left: 10px;
 }
 
+.heart_img{
+    position: absolute;
+    top: 48%;
+    left: 15%;
+    width: 60px;
+    height: 60px;   
+    animation: shake 2s infinite linear;
+}
 
+@keyframes shake{
+    50%{
+        transform: translateY(-5px);
+    }
+}
 
 @keyframes slide_top {
     0% {
@@ -402,17 +443,20 @@ button img{
     }
     .sub_nave{
         position: absolute;
-        left: -25%;
-        top: 80px;
+        left: -40%;
+        top: 90px;
         display: none;
+        background: inherit;
+        padding: 20px;
+        border-radius: 100px;
+
     }
     .sub_nave ul{
-        padding-left: 20px;
+        padding-left: 70px;
         flex-direction: column;
         height: 200px;
         border-radius: 50px;
-        background: white;
-        
+
     }
     .sub_nave ul li{
         z-index: 200;
@@ -436,6 +480,18 @@ button img{
     }
     .for_flex{
         flex-direction: column;
+    }
+    .active li{
+        transition: 2s ease-in-out;
+    }
+    .active li:nth-child(2){
+        display: none;
+    }
+    .active li:nth-child(1){
+        transform: translateY(4px) rotate(45deg);
+    }
+    .active li:nth-child(3){
+        transform: translateY(-5px) rotate(-45deg);
     }
 }
 
